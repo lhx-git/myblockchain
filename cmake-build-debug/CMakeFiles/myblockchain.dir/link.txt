@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/myblockchain.dir/server.cpp.o  -o myblockchain 
