@@ -1,7 +1,6 @@
 #include <iostream>
 #include "block_server/worker/aria_worker.h"
 #include "block_server/coordinator/aria_coordinator.h"
-#include "block_server/worker/worker_instance.h"
 #include "block_server/message_format/config.h"
 #include "common/hash_map.h"
 #include <thread>

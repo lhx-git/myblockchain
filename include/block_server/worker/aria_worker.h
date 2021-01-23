@@ -6,12 +6,15 @@
 #define MYBLOCKCHAIN_ARIA_WORKER_H
 #include "worker.h"
 #include "cstdlib"
+#include "block_server/worker/worker_instance.h"
+
 class AriaWorker : public Worker{
 public:
-    explicit AriaWorker(u_int32_t workerID):workerID(workerID){};
+    explicit AriaWorker(WorkerInstance* self):self(self){};
     ~AriaWorker()= default;;
     void run() override;
 private:
-    u_int32_t workerID;
+
+    WorkerInstance* self;
 };
 #endif //MYBLOCKCHAIN_ARIA_WORKER_H

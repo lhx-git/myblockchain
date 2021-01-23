@@ -6,6 +6,7 @@
 #define MYBLOCKCHAIN_ARIA_COORDINATOR_H
 
 #include <block_server/message_format/aria_global_state.h>
+#include <block_server/message_format/worker_state.h>
 #include "block_server/coordinator/coordinator.h"
 ;
 class WorkerInstance;
@@ -17,6 +18,10 @@ public:
     ~AriaCoordinator() = default;
     void createWorker(int32_t workerID);
     void run() override ;
+    void sycnToWorkers(AriaGlobalState state);
+    void setWorkerState(int32_t workerID,WorkerState workerState);
+    WorkerState getWorkerState(int32_t workerID);
+
 
 
 private:

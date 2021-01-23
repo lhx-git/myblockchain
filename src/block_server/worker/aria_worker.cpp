@@ -6,5 +6,6 @@
 #include "iostream"
 #include "common/hash_map.h"
 void AriaWorker::run() {
-    std::cout<<"run  "<<this->workerID;
+    std::cout<<"run  "<< this->self->workerID;
+
 }
