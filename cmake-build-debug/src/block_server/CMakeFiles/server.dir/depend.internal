@@ -29,6 +29,4 @@ src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o
  ../include/block_server/worker/aria_worker.h
  ../include/block_server/worker/worker.h
  ../include/block_server/worker/worker_instance.h
- ../include/common/hash_map.h
- ../include/common/spin_lock.h
  /home/lhx/CLionProjects/myblockchain/src/block_server/worker/aria_worker.cpp

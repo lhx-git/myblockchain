@@ -28,7 +28,5 @@ src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/bloc
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/worker/aria_worker.h
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/worker/worker.h
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/worker/worker_instance.h
-src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/common/hash_map.h
-src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/common/spin_lock.h
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../src/block_server/worker/aria_worker.cpp
 

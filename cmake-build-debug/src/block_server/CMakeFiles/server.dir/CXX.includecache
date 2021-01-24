@@ -47,6 +47,10 @@ block_server/message_format/worker_state.h
 -
 block_server/message_format/aria_global_state.h
 -
+mutex
+-
+condition_variable
+-
 
 /home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/aria_coordinator.cpp
 block_server/coordinator/aria_coordinator.h
@@ -55,4 +59,6 @@ block_server/message_format/config.h
 /home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/block_server/message_format/config.h
 block_server/worker/aria_worker.h
 /home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/block_server/worker/aria_worker.h
+glog/logging.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/glog/logging.h
 

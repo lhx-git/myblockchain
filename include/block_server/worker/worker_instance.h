@@ -9,6 +9,8 @@
 #include <thread>
 #include <block_server/message_format/worker_state.h>
 #include <block_server/message_format/aria_global_state.h>
+#include <mutex>
+#include <condition_variable>
 
 #endif //MYBLOCKCHAIN_WORKER_INSTANCE_H
 
@@ -19,4 +21,7 @@ public:
     int32_t workerID;
     std::shared_ptr<Worker> instance;
     std::shared_ptr<std::thread> thread;
+    std::mutex mutex;
+    std::condition_variable produce , consume;
+
 };

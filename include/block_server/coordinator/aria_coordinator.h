@@ -18,7 +18,8 @@ public:
     ~AriaCoordinator() = default;
     void createWorker(int32_t workerID);
     void run() override ;
-    void sycnToWorkers(AriaGlobalState state);
+    void broadToWorkers(AriaGlobalState state);
+    void sycnAllWorkers(WorkerState workerState);
     void setWorkerState(int32_t workerID,WorkerState workerState);
     WorkerState getWorkerState(int32_t workerID);
 
