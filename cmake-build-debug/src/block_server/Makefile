@@ -199,6 +199,33 @@ server.cpp.s:
 	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/block_server/CMakeFiles/server.dir/build.make src/block_server/CMakeFiles/server.dir/server.cpp.s
 .PHONY : server.cpp.s
 
+transaction/mock_transaction_manager.o: transaction/mock_transaction_manager.cpp.o
+
+.PHONY : transaction/mock_transaction_manager.o
+
+# target to build an object file
+transaction/mock_transaction_manager.cpp.o:
+	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/block_server/CMakeFiles/server.dir/build.make src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o
+.PHONY : transaction/mock_transaction_manager.cpp.o
+
+transaction/mock_transaction_manager.i: transaction/mock_transaction_manager.cpp.i
+
+.PHONY : transaction/mock_transaction_manager.i
+
+# target to preprocess a source file
+transaction/mock_transaction_manager.cpp.i:
+	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/block_server/CMakeFiles/server.dir/build.make src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.i
+.PHONY : transaction/mock_transaction_manager.cpp.i
+
+transaction/mock_transaction_manager.s: transaction/mock_transaction_manager.cpp.s
+
+.PHONY : transaction/mock_transaction_manager.s
+
+# target to generate assembly for a file
+transaction/mock_transaction_manager.cpp.s:
+	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/block_server/CMakeFiles/server.dir/build.make src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.s
+.PHONY : transaction/mock_transaction_manager.cpp.s
+
 worker/aria_worker.o: worker/aria_worker.cpp.o
 
 .PHONY : worker/aria_worker.o
@@ -241,6 +268,9 @@ help:
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
+	@echo "... transaction/mock_transaction_manager.o"
+	@echo "... transaction/mock_transaction_manager.i"
+	@echo "... transaction/mock_transaction_manager.s"
 	@echo "... worker/aria_worker.o"
 	@echo "... worker/aria_worker.i"
 	@echo "... worker/aria_worker.s"

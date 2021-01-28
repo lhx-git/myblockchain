@@ -103,9 +103,22 @@ src/block_server/CMakeFiles/server.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/server.cpp.s"
 	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lhx/CLionProjects/myblockchain/src/block_server/server.cpp -o CMakeFiles/server.dir/server.cpp.s
 
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: src/block_server/CMakeFiles/server.dir/flags.make
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: ../src/block_server/transaction/mock_transaction_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lhx/CLionProjects/myblockchain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o"
+	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o -c /home/lhx/CLionProjects/myblockchain/src/block_server/transaction/mock_transaction_manager.cpp
+
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.i"
+	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lhx/CLionProjects/myblockchain/src/block_server/transaction/mock_transaction_manager.cpp > CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.i
+
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.s"
+	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lhx/CLionProjects/myblockchain/src/block_server/transaction/mock_transaction_manager.cpp -o CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.s
+
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: src/block_server/CMakeFiles/server.dir/flags.make
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../src/block_server/worker/aria_worker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lhx/CLionProjects/myblockchain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lhx/CLionProjects/myblockchain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o"
 	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/worker/aria_worker.cpp.o -c /home/lhx/CLionProjects/myblockchain/src/block_server/worker/aria_worker.cpp
 
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.i: cmake_force
@@ -120,6 +133,7 @@ src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.s: cmake_force
 server_OBJECTS = \
 "CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o" \
 "CMakeFiles/server.dir/server.cpp.o" \
+"CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o" \
 "CMakeFiles/server.dir/worker/aria_worker.cpp.o"
 
 # External object files for target server
@@ -127,10 +141,11 @@ server_EXTERNAL_OBJECTS =
 
 src/block_server/server: src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o
 src/block_server/server: src/block_server/CMakeFiles/server.dir/server.cpp.o
+src/block_server/server: src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o
 src/block_server/server: src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o
 src/block_server/server: src/block_server/CMakeFiles/server.dir/build.make
 src/block_server/server: src/block_server/CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lhx/CLionProjects/myblockchain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lhx/CLionProjects/myblockchain/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable server"
 	cd /home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

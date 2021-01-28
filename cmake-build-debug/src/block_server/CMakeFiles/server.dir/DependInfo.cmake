@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/aria_coordinator.cpp" "/home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o"
   "/home/lhx/CLionProjects/myblockchain/src/block_server/server.cpp" "/home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server/CMakeFiles/server.dir/server.cpp.o"
+  "/home/lhx/CLionProjects/myblockchain/src/block_server/transaction/mock_transaction_manager.cpp" "/home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o"
   "/home/lhx/CLionProjects/myblockchain/src/block_server/worker/aria_worker.cpp" "/home/lhx/CLionProjects/myblockchain/cmake-build-debug/src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

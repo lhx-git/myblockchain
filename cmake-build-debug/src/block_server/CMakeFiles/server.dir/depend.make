@@ -6,6 +6,9 @@ src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../in
 src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/message_format/aria_global_state.h
 src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/message_format/config.h
 src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/message_format/worker_state.h
+src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/message_format/workload.h
+src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/transaction/transaction.h
+src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/transaction/transaction_wrapper.h
 src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/worker/aria_worker.h
 src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/worker/worker.h
 src/block_server/CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o: ../include/block_server/worker/worker_instance.h
@@ -16,15 +19,24 @@ src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/coo
 src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/message_format/aria_global_state.h
 src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/message_format/config.h
 src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/message_format/worker_state.h
+src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/message_format/workload.h
+src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/transaction/mock/mock_transaction_manager.h
+src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/transaction/transaction_manager.h
 src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/worker/aria_worker.h
 src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/worker/worker.h
 src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/block_server/worker/worker_instance.h
-src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/common/hash_map.h
-src/block_server/CMakeFiles/server.dir/server.cpp.o: ../include/common/spin_lock.h
 src/block_server/CMakeFiles/server.dir/server.cpp.o: ../src/block_server/server.cpp
+
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: ../include/block_server/transaction/mock/mock_transaction.h
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: ../include/block_server/transaction/mock/mock_transaction_manager.h
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: ../include/block_server/transaction/transaction.h
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: ../include/block_server/transaction/transaction_manager.h
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: ../include/block_server/transaction/transaction_wrapper.h
+src/block_server/CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o: ../src/block_server/transaction/mock_transaction_manager.cpp
 
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/message_format/aria_global_state.h
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/message_format/worker_state.h
+src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/message_format/workload.h
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/worker/aria_worker.h
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/worker/worker.h
 src/block_server/CMakeFiles/server.dir/worker/aria_worker.cpp.o: ../include/block_server/worker/worker_instance.h

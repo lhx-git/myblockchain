@@ -11,6 +11,12 @@ block_server/message_format/aria_global_state.h
 -
 block_server/message_format/worker_state.h
 -
+mutex
+-
+queue
+-
+condition_variable
+-
 block_server/coordinator/coordinator.h
 ../include/block_server/coordinator/block_server/coordinator/coordinator.h
 
@@ -18,6 +24,10 @@ block_server/coordinator/coordinator.h
 cstdlib
 ../include/block_server/coordinator/cstdlib
 map
+-
+atomic
+-
+functional
 -
 
 ../include/block_server/message_format/aria_global_state.h
@@ -28,11 +38,41 @@ vector
 
 ../include/block_server/message_format/worker_state.h
 
+../include/block_server/message_format/workload.h
+cstdlib
+../include/block_server/message_format/cstdlib
+vector
+-
+
+../include/block_server/transaction/mock/mock_transaction.h
+cstdlib
+../include/block_server/transaction/mock/cstdlib
+
+../include/block_server/transaction/mock/mock_transaction_manager.h
+block_server/transaction/transaction_manager.h
+../include/block_server/transaction/mock/block_server/transaction/transaction_manager.h
+
+../include/block_server/transaction/transaction.h
+memory
+-
+vector
+-
+
+../include/block_server/transaction/transaction_manager.h
+memory
+-
+functional
+-
+
+../include/block_server/transaction/transaction_wrapper.h
+vector
+-
+block_server/transaction/transaction.h
+../include/block_server/transaction/block_server/transaction/transaction.h
+
 ../include/block_server/worker/aria_worker.h
 worker.h
 ../include/block_server/worker/worker.h
-cstdlib
-../include/block_server/worker/cstdlib
 block_server/worker/worker_instance.h
 ../include/block_server/worker/block_server/worker/worker_instance.h
 
@@ -51,6 +91,8 @@ mutex
 -
 condition_variable
 -
+block_server/message_format/workload.h
+../include/block_server/worker/block_server/message_format/workload.h
 
 /home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/aria_coordinator.cpp
 block_server/coordinator/aria_coordinator.h
@@ -61,4 +103,42 @@ block_server/worker/aria_worker.h
 /home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/block_server/worker/aria_worker.h
 glog/logging.h
 /home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/glog/logging.h
+memory
+-
+block_server/transaction/transaction_wrapper.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/block_server/transaction/transaction_wrapper.h
+
+/home/lhx/CLionProjects/myblockchain/src/block_server/server.cpp
+iostream
+-
+block_server/worker/aria_worker.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/block_server/worker/aria_worker.h
+block_server/coordinator/aria_coordinator.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/block_server/coordinator/aria_coordinator.h
+block_server/message_format/config.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/block_server/message_format/config.h
+block_server/transaction/mock/mock_transaction_manager.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/block_server/transaction/mock/mock_transaction_manager.h
+thread
+-
+
+/home/lhx/CLionProjects/myblockchain/src/block_server/transaction/mock_transaction_manager.cpp
+block_server/transaction/mock/mock_transaction_manager.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/transaction/block_server/transaction/mock/mock_transaction_manager.h
+block_server/transaction/transaction.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/transaction/block_server/transaction/transaction.h
+block_server/transaction/mock/mock_transaction.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/transaction/block_server/transaction/mock/mock_transaction.h
+block_server/transaction/transaction_wrapper.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/transaction/block_server/transaction/transaction_wrapper.h
+memory
+-
+
+/home/lhx/CLionProjects/myblockchain/src/block_server/worker/aria_worker.cpp
+block_server/worker/aria_worker.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/worker/block_server/worker/aria_worker.h
+iostream
+/home/lhx/CLionProjects/myblockchain/src/block_server/worker/iostream
+glog/logging.h
+/home/lhx/CLionProjects/myblockchain/src/block_server/worker/glog/logging.h
 

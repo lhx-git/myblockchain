@@ -86,19 +86,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/lhx/CLionProjects/myblockchain/include/block_server/coordinator/aria_coordinator.h">
+		<Unit filename="/home/lhx/CLionProjects/myblockchain/include/block_server/message_format/workload.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/lhx/CLionProjects/myblockchain/include/block_server/coordinator/coordinator.h">
+		<Unit filename="/home/lhx/CLionProjects/myblockchain/include/block_server/transaction/mock/mock_transaction.h">
 			<Option target="server"/>
 		</Unit>
-		<Unit filename="/home/lhx/CLionProjects/myblockchain/include/block_server/message_format/config.h">
+		<Unit filename="/home/lhx/CLionProjects/myblockchain/include/block_server/transaction/mock/mock_transaction_manager.h">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/lhx/CLionProjects/myblockchain/src/block_server/coordinator/aria_coordinator.cpp">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/lhx/CLionProjects/myblockchain/src/block_server/server.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/home/lhx/CLionProjects/myblockchain/src/block_server/transaction/mock_transaction_manager.cpp">
 			<Option target="server"/>
 		</Unit>
 		<Unit filename="/home/lhx/CLionProjects/myblockchain/src/block_server/worker/aria_worker.cpp">

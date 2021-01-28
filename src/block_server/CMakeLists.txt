@@ -10,9 +10,10 @@ SET(LIBRARY_DEPENDENCIES
 FILE(GLOB SC_FILES
         "*.cpp"
         "worker/*.cpp"
-        "coordinator/*.cpp")
+        "coordinator/*.cpp"
+        "transaction/*.cpp")
 SET(BLOCK_SERVER_SOURCE
-        server.cpp ../../include/block_server/coordinator/aria_coordinator.h coordinator/aria_coordinator.cpp ../../include/block_server/coordinator/coordinator.h ../../include/block_server/message_format/config.h)
+        server.cpp ../../include/block_server/transaction/mock/mock_transaction_manager.h transaction/mock_transaction_manager.cpp ../../include/block_server/transaction/mock/mock_transaction.h ../../include/block_server/message_format/workload.h)
 
 
 

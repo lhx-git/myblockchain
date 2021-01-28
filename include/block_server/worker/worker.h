@@ -4,10 +4,18 @@
 
 #ifndef MYBLOCKCHAIN_WORKER_H
 #define MYBLOCKCHAIN_WORKER_H
+class WorkerInstance;
 class Worker{
 public:
-    Worker()=default;
-    ~Worker(){};
+    explicit Worker(WorkerInstance* self):self(self){}
+    ~Worker()= default;
     virtual void run() = 0;
+    WorkerInstance* getWorkerInstance(){return self;}
+
+protected:
+    WorkerInstance* self;
 };
+
+
+
 #endif //MYBLOCKCHAIN_WORKER_H

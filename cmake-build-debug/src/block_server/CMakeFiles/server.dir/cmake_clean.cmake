@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/server.dir/coordinator/aria_coordinator.cpp.o"
   "CMakeFiles/server.dir/server.cpp.o"
+  "CMakeFiles/server.dir/transaction/mock_transaction_manager.cpp.o"
   "CMakeFiles/server.dir/worker/aria_worker.cpp.o"
   "server"
   "server.pdb"
