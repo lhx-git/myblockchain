@@ -15,14 +15,15 @@ enum class AriaGlobalState;
 enum class WorkerState;
 class Transaction;
 class Workload;
+class TransactionWrapper;
 class AriaCoordinator : public Coordinator {
 public:
     explicit AriaCoordinator(std::atomic<uint32_t>& epochChan);
 
     ~AriaCoordinator() override;
     void run() override;
-    uint32_t addTransaction(Transaction* transaction) override;
-    //uint32_t addTransaction(TransactionWrapper* trWrapper) override;
+    //uint32_t addTransaction(Transaction* transaction) override;
+    uint32_t addTransaction(TransactionWrapper* trWrapper) override;
 
 protected:
     void mainRoutine();

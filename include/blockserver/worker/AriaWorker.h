@@ -7,6 +7,7 @@
 
 #include "worker.h"
 class WorkerInstance;
+class TransactionExecutor;
 
 enum class WorkerState;
 enum class AriaGlobalState;
@@ -21,6 +22,6 @@ protected:
     void setWorkerState(WorkerState state);
     bool waitForSignal(AriaGlobalState _state);
 private:
-    //transactionExecutor
+    std::shared_ptr<TransactionExecutor> transactionExecutor;
 };
 #endif //MYBLOCKCHAIN_ARIAWORKER_H

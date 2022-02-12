@@ -1,5 +1,5 @@
 //
-// Created by lhx on 2021/1/16.
+// Created by peng on 2021/1/16.
 //
 
 #ifndef NEUBLOCKCHAIN_ARIA_GLOBAL_STATE_H

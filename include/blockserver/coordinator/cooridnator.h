@@ -7,7 +7,7 @@
 #define MYBLOCKCHAIN_COORIDNATOR_H
 #include  <functional>
 class Transaction;
-
+class TransactionWrapper;
 class Coordinator {
 public:
     Coordinator(std::atomic<uint32_t>& epochChan) : epochChan(epochChan) {}
@@ -15,8 +15,7 @@ public:
     virtual void run() = 0;
 
     //sync call to add workload, async process it.
-    //virtual uint32_t addTransaction(TransactionWrapper* trWrapper) = 0;
-    virtual uint32_t addTransaction(Transaction* transaction) = 0;
+    virtual uint32_t addTransaction(TransactionWrapper* trWrapper) = 0;
     std::function<void(uint32_t)> epochTransactionFinishSignal;  //async callback to trManager
 
 protected:

@@ -1,0 +1,21 @@
+init_crypto: true #对象
+reset_epoch: true
+
+server_ips: [192.168.60.135] #数组
+
+epoch_ips: [192.168.60.135]
+
+server_data:
+  192.168.60.135:
+    public_crt: /tmp/192.168.60.135.public.key
+    private_crt: /tmp/192.168.60.135.private.key
+    user_public_crt: /tmp/192.168.60.135.public.user.key
+    user_private_crt: /tmp/192.168.60.135.private.user.key
+
+
+epoch_data:
+  public_crt: /tmp/epoch.public.key
+  private_crt: /tmp/epoch.private.key
+
+
+local_server_ip: 192.168.60.135

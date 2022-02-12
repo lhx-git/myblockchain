@@ -10,8 +10,9 @@
 #include "blockserver/worker/AriaWorker.h"
 #include <thread>
 #include "blockserver/transaction/transaction.h"
+#include "blockserver/transaction/transaction_wrapper.h"
 #include "glog/logging.h"
-#include "../common/complie_config.h"
+#include "common/complie_config.h"
 
 AriaCoordinator::AriaCoordinator(std::atomic<uint32_t> &epochChan) : Coordinator(epochChan) {
     globalState = AriaGlobalState::START;
@@ -199,22 +200,24 @@ void AriaCoordinator::getWorkload(uint32_t &isCurrentEpochEmpty, std::shared_ptr
         workload->transactionList.push_back(transaction);
         transactionBuffer.pop();
         transaction = transactionBuffer.front();
-    } while (!transactionBuffer.empty() && //transaction 不为空
+    } while (!transactionBuffer.empty() && //transactionbuffer 不为空
               transaction->getEpoch() == epochChan && //transactionbuffer里 还有当前epoch的交易
-              workload->transactionList.size() < COORDINATOR_MIN_TRANSACTION_PER_WORKLOAD); //不超过workload的最大负载
+              workload->transactionList.size() < COORDINATOR_MAX_TRANSACTION_PER_WORKLOAD); //不超过workload的最大负载
     DLOG(INFO) << "created a workload, size: " << workload->transactionList.size() << ", epoch:" << workload->epoch;
 
     produce.notify_one();
 }
 
-uint32_t AriaCoordinator::addTransaction(Transaction *transaction) {
-    //生产者函数
+uint32_t AriaCoordinator::addTransaction(TransactionWrapper *trWrapper) {
     std::unique_lock<std::mutex> lock(transactionBufferMutex);
-    produce.wait(lock, [this] {
-        return this->transactionBuffer.size() +  1 <= COORDINATOR_INPUT_MAX_BUFFER_SIZE;
+    produce.wait(lock, [this, trWrapper] {
+        return this->transactionBuffer.size() +  trWrapper->size() <= COORDINATOR_INPUT_MAX_BUFFER_SIZE;
     });
-    transactionBuffer.push(transaction);
-
+    DLOG(INFO) << "a TransactionWrapper has been unpack by coordinator, epoch id: " << trWrapper->getEpochNumber() << ", size: " << trWrapper->size();
+    while (trWrapper->size() > 0) {
+        transactionBuffer.push(trWrapper->popTransaction());
+    }
+    delete trWrapper;
     consume.notify_one();
     return 0;
 }

@@ -6,12 +6,15 @@
 #include "blockserver/worker/AriaWorker.h"
 #include "blockserver/message_fomat/worker_state.h"
 #include "blockserver/message_fomat/aria_global_state.h"
-
+#include "blockserver/worker/impl/transaction_executor_impl.h"
+#include "blockserver/message_fomat/workload.h"
+#include <memory>
 AriaWorker::AriaWorker(WorkerInstance *self) : Worker(self) {
     self->workerState.store(static_cast<uint32_t>(WorkerState::READY));
+    transactionExecutor = std::make_shared<TransactionExecutorImpl>();
 }
 
-AriaWorker::~AriaWorker() noexcept {
+AriaWorker::~AriaWorker()  {
     LOG(INFO) << "worker destroy id:"<< _self->workerID << std::endl;
 }
 
@@ -26,7 +29,7 @@ void AriaWorker::run() {
             return ;
         }
         //执行交易
-        sleep(1);
+        transactionExecutor->executeList(_self->workload->transactionList);
         DLOG(INFO) << "worker id = " << _self->workerID  << " has finished read, epoch: " << _self->epochChan << std::endl;
         setWorkerState(WorkerState::FINISH_READ);
 
@@ -35,7 +38,7 @@ void AriaWorker::run() {
             return ;
         }
         //提交事物
-        sleep(1);
+        transactionExecutor->commitList(_self->workload->transactionList);
         DLOG(INFO) << "worker id = " << _self->workerID  << " has finished commit, epoch: " << _self->epochChan << std::endl;
         setWorkerState(WorkerState::READY);
     }
